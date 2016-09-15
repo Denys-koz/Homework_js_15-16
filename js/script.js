@@ -36,7 +36,45 @@ $(function() {
 	
 
 
-    
+function Human(name, age) {
+	this.name = name;
+	this.age = age;
+	this.sex = 'M';
+	this.height = 170;
+	this.weight = 70;
+}
 
+function Worker(name, age) {
+	Human.apply(this, arguments);
+	this.job = 'factory';
+	this.salary = 2000;
+}
+    
+Worker.prototype = Object.create(Human.prototype);
+Worker.prototype.constructor = Worker;
+
+Worker.prototype.work = function() {
+	console.log(this.name + " is working.")
+}
+
+function Student(name, age) {
+	Human.apply(this, arguments);
+	this.place = 'Academy';
+	this.stipend = 500;
+}
+    
+Student.prototype = Object.create(Human.prototype);
+Student.prototype.constructor = Student;
+
+Student.prototype.watchTV = function() {
+	console.log(this.name + " is watching TV shows.")
+}
+
+var worker = new Worker("Bob", 40);
+var student = new Student("Billy", 21);
+worker.work();
+student.watchTV();
+console.log(student);
+console.log(worker);
 });
 
