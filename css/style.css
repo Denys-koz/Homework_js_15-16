@@ -1,0 +1,33 @@
+
+.container{
+    padding: 5px 10px 20px;
+}
+
+#holder{
+	width: 70%;
+    margin: 0 auto;
+}
+
+.search{
+    width: 300px;
+    margin: 30px auto;
+}
+
+.searchBtn{
+    padding: 5px 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #D3D3D3;
+}
+
+.searchBtn:hover{
+    background: #fff;
+}
+
+.searchImg{
+    max-height: 300px;
+    margin: 10px;
+    display: inline-block;
+    text-align: right;
+}
